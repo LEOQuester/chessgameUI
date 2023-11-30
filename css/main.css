@@ -1,0 +1,162 @@
+body{
+    background: #3b3a3a;
+    color : #FFFFFF;
+}
+.chessImg{
+    width: 350px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5%;
+    position: relative;
+    background: linear-gradient(0deg, rgb(77, 76, 76), rgb(43, 42, 42));
+    background: url("../images/chess.png") center;
+    background-size: contain;
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    align-content: center;
+    padding-top: 20px;
+}
+.btn{
+    position: relative;
+    padding: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 5%;
+    background: linear-gradient(0deg, black, rgb(32, 32, 32));
+
+}
+
+.glow::before , .glow::after{
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #00FFFF, #00E5FF, #00CCFF, #00B2FF, #0099FF, #007FFF, #0066FF, #004CFF);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+    border-radius: 5%;
+}
+.glow:hover{
+    box-shadow: 0 0 0 0;
+}
+.btn:focus{
+    background: #ffcc00;
+    color: black
+}
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+}
+
+.robot-face {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.robot-eyes-container {
+    display: flex;
+    gap: 20px;
+}
+
+.eye {
+    width: 100px;
+    height: 100px;
+    background-color: #00ffff; /* Aqua color */
+    border: 5px solid #00cccc; /* Darker Aqua border */
+    border-radius: 10px; /* Slight border radius for squared effect */
+    position: relative;
+    animation: glowEyes 2s infinite alternate, expressFeelings 3s infinite alternate;
+}
+
+@keyframes glowEyes {
+    0%, 100% {
+        box-shadow: 0 0 10px 5px #00cccc; /* Glowing effect */
+    }
+    50% {
+        box-shadow: 0 0 20px 10px #00cccc; /* Increased glow effect */
+    }
+}
+
+@keyframes expressFeelings {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    10% {
+        transform: scaleY(0.2);
+    }
+    20% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/* Angry expression with reshaping the square */
+.eye.angry {
+    animation: glowEyes 2s infinite alternate, expressAnger 3s infinite alternate;
+}
+
+@keyframes expressAnger {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(15deg); /* Rotate for an angry expression */
+    }
+    20% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.mouth {
+    width: 80px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #00cccc; /* Darker Aqua border */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-top: 20px;
+}
+
+.smile {
+    animation: expressHappiness 3s infinite alternate;
+}
+
+@keyframes expressHappiness {
+    0%, 100% {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    10% {
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+    20% {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    100% {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}

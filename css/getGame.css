@@ -1,0 +1,63 @@
+body {
+    background-color: #4d4a4a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.top-content {
+    text-align: center;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10vh;
+    background: url("../images/chess.png") center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.formData {
+    margin-top: 20px;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+p {
+    margin-bottom: 10px;
+}
+input, select {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 150px;
+    background: rgba(108, 215, 223, 0.8);
+    text-transform: uppercase;
+}
+select{
+    width: 165px;
+}
+.eloOpt{
+    background: rgba(255, 255, 255, 0.8);
+}
+input:focus,select:focus{
+    outline: none;
+}
+.black, .white {
+    background-color: #cacaca;
+    color: black;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 75px;
+}
+.black:focus, .white:focus {
+    background-color: #ffcc00; 
+    color: #202020; 
+}
+.submit:hover{
+    background-color: #ffcc00;
+    cursor: pointer;
+}
