@@ -1,15 +1,17 @@
-#board2{
+#board2 {
     width: 350px;
     display: block;
     margin: 0 auto;
     margin-top: 10vh;
 }
-body{
+
+body {
     background: #1E1E1E;
-    color : #FFFFFF;
+    color: #FFFFFF;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.info{
+
+.info {
     width: 360px;
     height: 200px;
     margin-top: 10px;
@@ -20,17 +22,20 @@ body{
     padding-left: 10px;
     display: block;
 }
-.info-raw{
+
+.info-raw {
     display: flex;
 }
-.info-col{
+
+.info-col {
     padding: 5px
 }
 
-.col1{
+.col1 {
     width: 50%;
     text-align: left
 }
-.col2{
+
+.col2 {
     color: aqua;
 }

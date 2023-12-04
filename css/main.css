@@ -1,8 +1,9 @@
-body{
+body {
     background: #3b3a3a;
-    color : #FFFFFF;
+    color: #FFFFFF;
 }
-.chessImg{
+
+.chessImg {
     width: 350px;
     padding: 10px;
     display: block;
@@ -15,16 +16,18 @@ body{
     background: url("../images/chess.png") center;
     background-size: contain;
 }
-.main{
+
+.main {
     height: 100vh;
     width: 100%;
     align-content: center;
     padding-top: 20px;
 }
-.btn{
+
+.btn {
     position: relative;
     padding: 10px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: block;
     margin: 0 auto;
     margin-top: 20px;
@@ -33,7 +36,8 @@ body{
 
 }
 
-.glow::before , .glow::after{
+.glow::before,
+.glow::after {
     content: '';
     position: absolute;
     left: -2px;
@@ -47,18 +51,22 @@ body{
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
     border-radius: 5%;
 }
-.glow:hover{
+
+.glow:hover {
     box-shadow: 0 0 0 0;
 }
-.btn:focus{
+
+.btn:focus {
     background: #ffcc00;
     color: black
 }
+
 @keyframes animate {
-    0%{
+    0% {
         background-position: 0 0;
     }
-    50%{
+
+    50% {
         background-position: 400% 0;
     }
 }
@@ -77,32 +85,45 @@ body{
 .eye {
     width: 100px;
     height: 100px;
-    background-color: #00ffff; /* Aqua color */
-    border: 5px solid #00cccc; /* Darker Aqua border */
-    border-radius: 10px; /* Slight border radius for squared effect */
+    background-color: #00ffff;
+    /* Aqua color */
+    border: 5px solid #00cccc;
+    /* Darker Aqua border */
+    border-radius: 10px;
+    /* Slight border radius for squared effect */
     position: relative;
     animation: glowEyes 2s infinite alternate, expressFeelings 3s infinite alternate;
 }
 
 @keyframes glowEyes {
-    0%, 100% {
-        box-shadow: 0 0 10px 5px #00cccc; /* Glowing effect */
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px 5px #00cccc;
+        /* Glowing effect */
     }
+
     50% {
-        box-shadow: 0 0 20px 10px #00cccc; /* Increased glow effect */
+        box-shadow: 0 0 20px 10px #00cccc;
+        /* Increased glow effect */
     }
 }
 
 @keyframes expressFeelings {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scaleY(1);
     }
+
     10% {
         transform: scaleY(0.2);
     }
+
     20% {
         transform: scaleY(1);
     }
+
     100% {
         transform: scaleY(1);
     }
@@ -114,15 +135,21 @@ body{
 }
 
 @keyframes expressAnger {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: rotate(0deg);
     }
+
     10% {
-        transform: rotate(15deg); /* Rotate for an angry expression */
+        transform: rotate(15deg);
+        /* Rotate for an angry expression */
     }
+
     20% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(0deg);
     }
@@ -132,7 +159,8 @@ body{
     width: 80px;
     height: 40px;
     background-color: transparent;
-    border: 2px solid #00cccc; /* Darker Aqua border */
+    border: 2px solid #00cccc;
+    /* Darker Aqua border */
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     margin-top: 20px;
@@ -143,18 +171,23 @@ body{
 }
 
 @keyframes expressHappiness {
-    0%, 100% {
+
+    0%,
+    100% {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
+
     10% {
         border-bottom-left-radius: 40px;
         border-bottom-right-radius: 40px;
     }
+
     20% {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
+
     100% {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;

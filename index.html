@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <div class="main">
-        <img src="images/chess.png" alt="" class="chessImg glowimg">
+        <div class="chessImg">
+            <div class="robot-face">
+                <div class="robot-eyes-container">
+                    <div class="eye"></div>
+                    <div class="eye angry"></div>
+                </div>
+                <div class="mouth smile"></div>
+            </div>
+        </div>
         <Button class="btn glow" onclick="playDirect()">Play a Game</Button>
     </div>
     <script>
-        function playDirect(){
+        function playDirect() {
             window.location.href = "getGame.html";
         }
     </script>
 </body>
+
 </html>
