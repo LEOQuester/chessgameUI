@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Game</title>
     <link rel="stylesheet" href="css/getGame.css">
+    <link rel="stylesheet" href="css/alert.css">
 </head>
-
 <body>
     <div class="top-content">
         <form class="formData" onsubmit="submitData(event)">
@@ -16,51 +15,35 @@
             <p>Game Elo :</p>
             <select name="elo" id="elo" class="elo" onchange="setElo(this.value)">
                 <option value=""></option>
-                <option class="eloOpt" value="100">100</option>
-                <option class="eloOpt" value="200">200</option>
-                <option class="eloOpt" value="300">300</option>
                 <option class="eloOpt" value="400">400</option>
-                <option class="eloOpt" value="500">500</option>
-                <option class="eloOpt" value="500">500</option>
-                <option class="eloOpt" value="600">600</option>
-                <option class="eloOpt" value="700">700</option>
                 <option class="eloOpt" value="800">800</option>
                 <option class="eloOpt" value="900">900</option>
                 <option class="eloOpt" value="1000">1000</option>
                 <option class="eloOpt" value="1100">1100</option>
                 <option class="eloOpt" value="1200">1200</option>
-                <option class="eloOpt" value="1300">1300</option>
-                <option class="eloOpt" value="1400">1400</option>
                 <option class="eloOpt" value="1500">1500</option>
-                <option class="eloOpt" value="1600">1600</option>
                 <option class="eloOpt" value="1700">1700</option>
-                <option class="eloOpt" value="1800">1800</option>
                 <option class="eloOpt" value="1900">1900</option>
                 <option class="eloOpt" value="2000">2000</option>
-                <option class="eloOpt" value="2100">2100</option>
-                <option class="eloOpt" value="2200">2200</option>
-                <option class="eloOpt" value="2300">2300</option>
-                <option class="eloOpt" value="2400">2400</option>
                 <option class="eloOpt" value="2500">2500</option>
-                <option class="eloOpt" value="2600">2600</option>
-                <option class="eloOpt" value="2700">2700</option>
-                <option class="eloOpt" value="2800">2800</option>
-                <option class="eloOpt" value="2900">2900</option>
-                <option class="eloOpt" value="3000">3000</option>
-                <option class="eloOpt" value="3100">3100</option>
-                <option class="eloOpt" value="3200">3200</option>
-                <option class="eloOpt" value="3300">3300</option>
-                <option class="eloOpt" value="3400">3400</option>
-                <option class="eloOpt" value="3500">3500</option>
             </select>
             <p>Your Color :</p>
             <button class="black" name="color" type="button" onclick="selectColor('black')">BLACK</button>
             <button class="white" name="color" type="button" onclick="selectColor('white')">WHITE</button>
             <br><br>
-            <input type="submit" value="Play Now" name="submit" class="submit">
+            <input type="submit" value="Play a Quick Game" name="submit" class="submit">
         </form>
     </div>
-    <script src="js/getGame.js"></script>
-</body>
 
+     <!-- Custom Alert Modal -->
+     <div id="customAlert" class="custom-alert">
+        <div class="custom-alert-content">
+            <p id="customAlertMessage"></p>
+            <button id="customAlertButton">OK</button>
+            <button onclick="closeCustomAlert()">Cancel</button>
+        </div>
+    </div>
+    <script src="js/getGame.js"></script>
+    <script src="js/alert.js"></script>
+</body>
 </html>

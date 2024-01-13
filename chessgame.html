@@ -13,37 +13,34 @@
 </head>
 
 <body>
-    <div class="board-container">
-        <div id="board2"></div>
-    </div>
-
-    <br><br>
-    <!--Game Info-->
-    <center>
-        <div class="info">
-            <div class="info-raw">
-                <div class="info-col col1">ROBOT SERIAL</div>
-                <div class="info-col col2">: 72365RF764</div>
-            </div>
-            <div class="info-raw">
-                <div class="info-col col1">GAME ID</div>
-                <div class="info-col col2">: 002</div>
-            </div>
-            <div class="info-raw">
-                <div class="info-col col1">ELO</div>
-                <div class="info-col col2">: 200</div>
-            </div>
-            <div class="info-raw">
-                <div class="info-col col1">STATE</div>
-                <div class="info-col col2">: Ongoing</div>
-            </div>
+    <div class="main-container">
+        <div class="board-container">
+            <div id="board2"></div>
         </div>
-    </center>
-
-
+        <br><br>
+        <!--Game Info-->
+        <center>
+            <div class="info">
+                <div class="info-raw">
+                    <div class="info-col col1">ROBOT SERIAL</div>
+                    <div class="info-col col2" id="serial">: -------</div>
+                </div>
+                <div class="info-raw">
+                    <div class="info-col col1">GAME ID</div>
+                    <div class="info-col col2" id="gameId">: -------</div>
+                </div>
+                <div class="info-raw">
+                    <div class="info-col col1">ELO</div>
+                    <div class="info-col col2" id="elo">: -------</div>
+                </div>
+            </div>
+        </center>
+    </div>
     <!--Importing Js Files-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.2/chess.js" integrity="sha384-s3XgLpvmHyscVpijnseAmye819Ee3yaGa8NxstkJVyA6nuDFjt59u1QvuEl/mecz" crossorigin="anonymous"></script>
+    <script type="module" src="js/board.js"></script>
     <script src="js/chessboard-1.0.0.js"></script>
-    <script src="js/board.js"></script>
+    
 </body>
 
 </html>

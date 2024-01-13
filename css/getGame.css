@@ -57,6 +57,10 @@ input:focus,select:focus{
     background-color: #ffcc00; 
     color: #202020; 
 }
+.submit{
+    width: 70%;
+    font-size: 12px;
+}
 .submit:hover{
     background-color: #ffcc00;
     cursor: pointer;
